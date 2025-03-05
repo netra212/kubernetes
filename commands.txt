@@ -75,3 +75,22 @@ k get deployments
 k scale deployment nginx-deployment --replicas=5
 
 26. k get pods
+
+27. Accessing all the pods with IP address. 
+k get pods -o wide
+
+28. Now, Let's Connect two pod. 
+curl ip_address
+
+29. 
+(base) nydvc ~ % minikube ip
+192.168.49.2
+(base) ydvc ~ % minikube ssh
+docker@minikube:~$ 
+
+30. Exposing internal port to external. 
+k expose deployment nginx-deployment --port=8080 --target-port=80
+
+
+31. Extracting the services: svc((short version of services))
+k get svc
