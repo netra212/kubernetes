@@ -30,3 +30,17 @@ kubectl run nginx --image=nginx
 
 12. 
 kubectl describe pod nginx 
+
+13. minikube ssh
+
+14. docker ps | grep nginx
+
+15. Connecting two container. 
+docker exec -it da4c1d2d89df sh
+    # hostname
+        nginx
+    # hostname -i
+        10.244.0.3
+    # curl 10.244.0.3
+        Gives html code. 
+    
