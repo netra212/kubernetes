@@ -1,3 +1,15 @@
-minikube start --driver=docker
+1. minikube start --driver=docker
 
-minikube status
+2. minikube status
+
+finding an ip address which was assigned by kubernetes. 
+3. minikube ip
+192.168.49.2
+
+4. minikube ssh
+
+--------------------------------------------------------
+5.
+Default password for the minikube node user credentials:
+Username: docker
+Password: tcuser
