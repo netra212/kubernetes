@@ -139,3 +139,26 @@ docker@minikube:~$
 35. list now service
      k get deployment
      k get svc
+
+--------------------------------
+
+1. Building an Docker Image:
+    docker build -t netra2127/k8s-web-hello:latest .
+
+2. Pushing images to docker hub:
+    docker push netra2127/k8s-web-hello:latest
+
+3. Creating the deployment:
+    kubectl create deployment k8s-web-hello --image=netra212/kubernetes/k8s-web-hello
+
+# This will create the cluster id for the deployments.
+# kubectl expose deployment k8s-web-hello --port=3000
+
+# kubectl expose deployment k8s-web-hello --port=3000
+# kubectl get svc
+# kubectl get pods
+# kubectl get deployments
+# kubectl scale deployment k8s-web-hello --replicas=4
+# kubectl get pods
+# kubectl get pods -o wide
+# kubectl get svc
