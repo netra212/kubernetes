@@ -189,6 +189,12 @@ Selectors are used to connect deployments with pods.
 
 In Kubernetes, Pods and Deployments are separate objects, which is why selectors are necessary.
 
+### **Docker Commands:**
+
+* Building an docker image. 
+```bash docker build . -t github_username/folder_name_where_docker_file_present```
+
+* 
 ----
 ## **Conclusion**
 ----
