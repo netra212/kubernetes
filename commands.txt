@@ -6,7 +6,7 @@ finding an ip address which was assigned by kubernetes.
 3. minikube ip
 192.168.49.2
 
-4. minikube ssh
+4. minikube ssh --> no need pass an ip address.
 
 --------------------------------------------------------
 5.
@@ -25,4 +25,8 @@ Password: tcuser
 10. List systems pods which are running in master node:
 kubectl get pods --namespace=kube-system
 
-11. 
+11. Creating 
+kubectl run nginx --image=nginx
+
+12. 
+kubectl describe pod nginx 
