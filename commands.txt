@@ -1,39 +1,47 @@
-1. minikube start --driver=docker
+1. 
+    minikube start --driver=docker
 
-2. minikube status
+2. 
+    minikube status
 
 finding an ip address which was assigned by kubernetes. 
 3. minikube ip
 192.168.49.2
 
-4. minikube ssh --> no need pass an ip address.
-
+4. No need pass an ip address.
+    minikube ssh
 --------------------------------------------------------
 5.
 Default password for the minikube node user credentials:
-Username: docker
-Password: tcuser
+    Username: docker
+    Password: tcuser
 
-6. kubectl cluster-info
+6. 
+    kubectl cluster-info
 
-7. kubectl get nodes -> gives available nodes. 
+7. 
+    kubectl get nodes -> gives available nodes. 
 
-8. kubectl get pods -> gives available pods. 
+8. 
+    kubectl get pods -> gives available pods. 
 
-9. kubectl get namespaces -> used to group different resources.
+9. Used to group different resources.
+    kubectl get namespaces
 
 10. List systems pods which are running in master node:
-kubectl get pods --namespace=kube-system
+    kubectl get pods --namespace=kube-system
 
 11. Creating 
-kubectl run nginx --image=nginx
+    kubectl run nginx --image=nginx
 
 12. 
-kubectl describe pod nginx 
+    kubectl describe pod nginx 
 
-13. minikube ssh
+13. 
+    minikube ssh
 
-14. docker ps | grep nginx
+14. 
+    docker ps | grep nginx
 
 15. Connecting two container. 
 docker exec -it da4c1d2d89df sh
@@ -47,40 +55,43 @@ docker exec -it da4c1d2d89df sh
 16. Existing from connections:
     logout
 
-17. kubectl get pods -o wide
+17. 
+    kubectl get pods -o wide
 
 18. Delete pods. 
-kubectl delete pod nginx
+    kubectl delete pod nginx
 
 19. Checking. 
-kubectl get pods
+    kubectl get pods
 
 20. Creating an alias of kubectl command. 
-alias k="kubectl"
+    alias k="kubectl"
 
 21. Creating deployment:
-k create deployment nginx-deployment --image=nginx
+    k create deployment nginx-deployment --image=nginx
 
 22. Getting the deployment:
 k get deployments
 
-23. k describe deployment nginx-deployment
+23. 
+    k describe deployment nginx-deployment
 
 # Note:- Selector are used to connect the deployment with pods. 
 # In kubernetes, pods and deployment are separate object so that selector comes into a Picture.
 
-24. k describe pods nginx-deployment-6cfb98644c-2rdjb
+24. 
+    k describe pods nginx-deployment-6cfb98644c-2rdjb
 
 25. scaling deployment. 
-k scale deployment nginx-deployment --replicas=5
+    k scale deployment nginx-deployment --replicas=5
 
 26. k get pods
 
 27. Accessing all the pods with IP address. 
-k get pods -o wide
+    k get pods -o wide
 
 28. Now, Let's Connect two pod. 
-curl ip_address
+    curl ip_address
 
 29. 
 (base) nydvc ~ % minikube ip
@@ -89,8 +100,13 @@ curl ip_address
 docker@minikube:~$ 
 
 30. Exposing internal port to external. 
-k expose deployment nginx-deployment --port=8080 --target-port=80
+    k expose deployment nginx-deployment --port=8080 --target-port=80
 
 
 31. Extracting the services: svc((short version of services))
-k get svc
+    k get svc
+
+# Cluster ip address is not available outside of the kubernetes cluster. 
+
+32. Accessing the particular service. 
+    k describe service nginx-deployment
