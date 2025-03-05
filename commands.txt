@@ -43,4 +43,31 @@ docker exec -it da4c1d2d89df sh
         10.244.0.3
     # curl 10.244.0.3
         Gives html code. 
-    
+
+16. Existing from connections:
+    logout
+
+17. kubectl get pods -o wide
+
+18. Delete pods. 
+kubectl delete pod nginx
+
+19. Checking. 
+kubectl get pods
+
+20. Creating an alias of kubectl command. 
+alias k="kubectl"
+
+21. Creating deployment:
+k create deployment nginx-deployment --image=nginx
+
+22. Getting the deployment:
+k get deployments
+
+23. k describe deployment nginx-deployment
+
+# Note:- Selector are used to connect the deployment with pods. 
+# In kubernetes, pods and deployment are separate object so that selector comes into a Picture.
+
+24. k describe pods nginx-deployment-6cfb98644c-2rdjb
+
