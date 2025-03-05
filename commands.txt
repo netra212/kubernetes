@@ -71,3 +71,7 @@ k get deployments
 
 24. k describe pods nginx-deployment-6cfb98644c-2rdjb
 
+25. scaling deployment. 
+k scale deployment nginx-deployment --replicas=5
+
+26. k get pods
