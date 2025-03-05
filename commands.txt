@@ -129,3 +129,13 @@ docker@minikube:~$
         Events:            <none>
         (base) nk@MacBookPro ~ % 
     '''
+
+33. Removing deployment
+    k delete deployment nginx-deployment
+
+34. Also, Delete services. 
+    k delete service nginx-deployment
+
+35. list now service
+     k get deployment
+     k get svc
