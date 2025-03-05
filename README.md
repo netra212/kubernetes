@@ -192,9 +192,16 @@ In Kubernetes, Pods and Deployments are separate objects, which is why selectors
 ### **Docker Commands:**
 
 * Building an docker image. 
+
 ```bash docker build . -t github_username/folder_name_where_docker_file_present```
 
-* 
+* docker login
+
+  ```bash docker login```
+
+* Pushing 
+
+  ```bash docker push netra212/k8s-web-hello```
 ----
 ## **Conclusion**
 ----
