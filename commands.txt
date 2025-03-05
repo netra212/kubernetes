@@ -13,3 +13,16 @@ finding an ip address which was assigned by kubernetes.
 Default password for the minikube node user credentials:
 Username: docker
 Password: tcuser
+
+6. kubectl cluster-info
+
+7. kubectl get nodes -> gives available nodes. 
+
+8. kubectl get pods -> gives available pods. 
+
+9. kubectl get namespaces -> used to group different resources.
+
+10. List systems pods which are running in master node:
+kubectl get pods --namespace=kube-system
+
+11. 
